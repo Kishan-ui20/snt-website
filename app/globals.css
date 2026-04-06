@@ -1,17 +1,15 @@
 @import "tailwindcss";
-
+/* Custom variables */
 :root {
+  --brandGreen: #2f7a3d;
+  --brandWhite: #ffffff;
+  --brandCream: #fffaf0;
+
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,10 +17,11 @@
   }
 }
 
+/* Font */
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 body {
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Swiper arrows */
@@ -33,20 +32,11 @@ body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: #2f7a3d;
-  color: #fff;
 }
 
 /* Swiper dots */
 .swiper-pagination-bullet {
   background: #ccc;
-  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
